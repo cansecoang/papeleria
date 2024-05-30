@@ -1,7 +1,3 @@
-<?php
-require 'functions.php';
-require 'router.php';
+<?php 
 
-
-
-
+require "casa.view.php";
