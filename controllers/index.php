@@ -1,6 +1,5 @@
 <?php 
 $heading = 'casa';
 
-var_dump($_SERVER['REQUEST_URI']);
-
+require("functions.php");
 require("views/index.view.php");
