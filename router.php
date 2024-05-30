@@ -3,8 +3,8 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => 'controllers/index.php',
-    '/historia' => 'controllers/historia.php',
-    '/sucursales' => 'controllers/sucursales.php'
+    '/clientes' => 'controllers/clientes.php',
+    '/empleados' => 'controllers/empleados.php',
 ];
 
 function routeToPage($uri,$routes) {

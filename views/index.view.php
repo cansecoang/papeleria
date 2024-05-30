@@ -17,7 +17,7 @@
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <!-- Your content -->
-      <h1>Hola desde casita</h1>
+      <h1>Hola desde index</h1>
 
     </div>
   </main>
