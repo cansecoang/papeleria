@@ -1,7 +1,7 @@
 CREATE TABLE clientes (
 
 id_cliente INT NOT NULL,
-PRIMARY KEY(id_cliente),
+PRIMid_clienteARY KEY(id_cliente),
 nombre VARCHAR(50),
 apellido VARCHAR(50),
 telefono VARCHAR(15),

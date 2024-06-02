@@ -1,5 +1,5 @@
 <header>
     <div>
-      <h1>Hola desde <?= $heading ?> </h1>
+      <h1>Registro de <?= $heading ?> </h1>
     </div>
   </header>
