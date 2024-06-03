@@ -35,5 +35,53 @@ require("functions.php");
       </fieldset>
     </form>
 
+    <div>
+      <h2>Lista de empleados</h2>
+
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Correo electrónico</th>
+          <th>Telefono</th>
+          <th>Puesto</th>
+          <th>Fecha de contratacion</th>
+
+        </tr>
+
+        <?php
+
+          $conn = mysqli_connect("pape", "root", "", "papeleria_db");
+      
+          $sql = "SELECT * FROM empleados";
+          $result = mysqli_query($conn, $sql);
+
+          if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>";
+                    echo "<td>" . $row["id_empleado"] . "</td>";
+                    echo "<td>" . $row["nombre_empleado"] . "</td>";
+                    echo "<td>" . $row["apaterno_empleado"] . "</td>";
+                    echo "<td>" . $row["amaterno_empleado"] . "</td>";
+                    echo "<td>" . $row["correo_empleado"] . "empleado</td>";
+                    echo "<td>" . $row["telefono_empleado"] . "</td>";
+                    echo "<td>" . $row["puesto"] . "</td>";
+                    echo "<td>" . $row["fecha_contratacion"] . "</td>";
+                  echo "</tr>";
+              }
+          } else {
+              echo "0 resultados";
+          }
+      
+          mysqli_close($conn);
+        ?>
+
+      </table>
+
+
+    </div>
+
   </main>
 

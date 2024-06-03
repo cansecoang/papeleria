@@ -11,7 +11,7 @@ $id_cliente = $_POST['id_cliente'];
 $id_empleado = $_POST['id_empleado'];
 $total_f = $_POST['total_f'];
 
-$sql = "INSERT INTO clientes (id_venta, fecha_hora, id_cliente, id_empleado, total_f) VALUES 
+$sql = "INSERT INTO ventas (id_venta, fecha_hora, id_cliente, id_empleado, total_f) VALUES 
 ('$id_venta', '$fecha_hora', '$id_cliente', '$id_empleado', '$total_f')";
 
 

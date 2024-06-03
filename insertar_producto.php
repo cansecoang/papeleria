@@ -14,7 +14,7 @@ $id_proveedor = $_POST['id_proveedor'];
 $id_categoria = $_POST['id_categoria'];
 
 
-$sql = "INSERT INTO clientes (id_producto, nombre_producto, descripcion, precio, stock,id_proveedor,id_categoria) VALUES 
+$sql = "INSERT INTO productos (id_producto, nombre_producto, descripcion, precio, stock,id_proveedor,id_categoria) VALUES 
 ('$id_producto', '$nombre_producto', '$descripcion', '$precio', '$stock','$id_proveedor','$id_categoria')";
 
 

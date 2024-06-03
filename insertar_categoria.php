@@ -1,4 +1,4 @@
-id_categoria<?php 
+<?php 
 
 $conn = mysqli_connect("pape","root","","papeleria_db");
 
@@ -9,8 +9,8 @@ $id_categoria = $_POST['id_categoria'];
 $nombre_categoria = $_POST['nombre_categoria'];
 $descripcion_categoria = $_POST['descripcion_categoria'];
 
-$sql = "INSERT INTO clientes (id_categoria, nombre_categoria, descripcion_categoria) VALUES 
-('$id_categoria', '$nombre_categoria', '$descripcion_categoria', '$telefono')";
+$sql = "INSERT INTO categorias (id_categoria, nombre_categoria, descripcion_categoria) VALUES 
+('$id_categoria', '$nombre_categoria', '$descripcion_categoria')";
 
 
 

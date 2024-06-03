@@ -7,11 +7,12 @@ if ($conn->connect_error) {
 
 $id_detalle = $_POST['id_detalle'];
 $id_venta = $_POST['id_venta'];
+$id_producto = $_POST['id_producto'];
 $cantidad = $_POST['cantidad'];
 $total_p = $_POST['total_p'];
 
-$sql = "INSERT INTO clientes (id_detalle, id_venta, cantidad, total_p) VALUES 
-('$id_detalle', '$id_venta', '$cantidad', '$total_p')";
+$sql = "INSERT INTO detalle_venta (id_detalle, id_venta, id_producto, cantidad, total_p) VALUES 
+('$id_detalle', '$id_venta','$id_producto', '$cantidad', '$total_p')";
 
 
 

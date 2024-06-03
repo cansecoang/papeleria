@@ -24,5 +24,43 @@ require("functions.php");
       </fieldset>
     </form>
 
+    <div>
+      <h2>Lista de categorias</h2>
+
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+
+        </tr>
+
+        <?php
+
+          $conn = mysqli_connect("pape", "root", "", "papeleria_db");
+      
+          $sql = "SELECT * FROM categorias";
+          $result = mysqli_query($conn, $sql);
+
+          if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>";
+                    echo "<td>" . $row["id_categoria"] . "</td>";
+                    echo "<td>" . $row["nombre_categoria"] . "</td>";
+                    echo "<td>" . $row["descripcion_categoria"] . "</td>";
+                  echo "</tr>";
+              }
+          } else {
+              echo "0 resultados";
+          }
+      
+          mysqli_close($conn);
+        ?>
+
+      </table>
+
+
+    </div>
+
   </main>
 

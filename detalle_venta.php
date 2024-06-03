@@ -28,6 +28,48 @@ require("functions.php");
       </fieldset>
     </form>
 
+    <div>
+      <h2>Lista detalle de ventas</h2>
+
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>ID venta</th>
+          <th>ID producto</th>
+          <th>Cantidad</th>
+          <th>Subtotal </th>
+
+        </tr>
+
+        <?php
+
+          $conn = mysqli_connect("pape", "root", "", "papeleria_db");
+      
+          $sql = "SELECT * FROM detalle_venta";
+          $result = mysqli_query($conn, $sql);
+
+          if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>";
+                    echo "<td>" . $row["id_detalle"] . "</td>";
+                    echo "<td>" . $row["id_venta"] . "</td>";
+                    echo "<td>" . $row["id_producto"] . "</td>";
+                    echo "<td>" . $row["cantidad"] . "</td>";
+                    echo "<td>" . $row["total_p"] . "</td>";
+                  echo "</tr>";
+              }
+          } else {
+              echo "0 resultados";
+          }
+      
+          mysqli_close($conn);
+        ?>
+
+      </table>
+
+
+    </div>
+
   </main>
 
 

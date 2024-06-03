@@ -33,5 +33,53 @@ require("functions.php");
       </fieldset>
     </form>
 
+    <div>
+      <h2>Lista de productos</h2>
+
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>ID proveedor</th>
+          <th>ID categoría</th>
+
+
+        </tr>
+
+        <?php
+
+          $conn = mysqli_connect("pape", "root", "", "papeleria_db");
+      
+          $sql = "SELECT * FROM productos";
+          $result = mysqli_query($conn, $sql);
+
+          if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>";
+                    echo "<td>" . $row["id_producto"] . "</td>";
+                    echo "<td>" . $row["nombre_producto"] . "</td>";
+                    echo "<td>" . $row["descripcion"] . "</td>";
+                    echo "<td>" . $row["precio"] . "</td>";
+                    echo "<td>" . $row["stock"] . "</td>";
+                    echo "<td>" . $row["id_proveedor"] . "</td>";
+                    echo "<td>" . $row["id_categoria"] . "</td>";
+                  echo "</tr>";
+              }
+          } else {
+              echo "0 resultados";
+          }
+      
+          mysqli_close($conn);
+        ?>
+
+      </table>
+
+
+    </div>
+
+
   </main>
 
