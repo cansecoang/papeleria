@@ -84,6 +84,8 @@ FOREIGN KEY(id_producto) REFERENCES productos(id_producto)
 
 
 --sudo ./manager-linux-x64.run 
+-- sudo systemctl status ssh
+--ip addr show
 
 
 
